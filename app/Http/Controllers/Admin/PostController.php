@@ -52,8 +52,12 @@ class PostController extends Controller
 
         if($request->file('file')){
             
-            $url = Storage::disk('s3')->put('posts', $request->file('file'));
-
+            // $url = Storage::disk('s3')->put($request->file('file'));
+            
+            $file = $request->file('file');
+            $imageName=time().$file->getClientOriginalName();
+            $filePath = 'images/' . $imageName;
+            $url = Storage::disk('s3')->put($filePath, file_get_contents($file));
 
             $post->image()->create([
                 'url' => $url
