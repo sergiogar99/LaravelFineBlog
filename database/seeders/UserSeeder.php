@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
     {
         //Fake users
 
-        Storage::makeDirectory('posts');
+        // Storage::makeDirectory('posts');
 
         User::create([
 
