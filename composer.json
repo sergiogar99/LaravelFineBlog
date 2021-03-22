@@ -9,6 +9,8 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "aws/aws-sdk-php": "^3.175",
+        "fakerphp/faker": "^1.9.1",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -18,8 +20,10 @@
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.5",
         "laravelcollective/html": "^6.2",
-        "livewire/livewire": "^2.0",
-        "fakerphp/faker": "^1.9.1"
+        "league/flysystem-aws-s3-v3": "1.0",
+        "league/flysystem-sftp": "1.*",
+        "league/mime-type-detection": "^1.7",
+        "livewire/livewire": "^2.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
