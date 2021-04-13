@@ -27,11 +27,11 @@
 
                 <tbody>
 
-                    @foreach ($posts as $post)
+                    @foreach ($posts as $index => $post)
 
                     <tr>
                             
-                        <td>{{$post->id}}</td>
+                        <td>{{$index + 1}}</td>
                         <td>{{$post->name}}</td>
                         <td width="10px">
                             <a class="btn btn-primary btn-sm " href="{{route('admin.posts.edit', $post)}}">Edit</a>

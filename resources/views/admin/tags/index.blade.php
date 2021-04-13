@@ -5,8 +5,7 @@
 @section('content_header')
 
     <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.tags.create')}}">Add New Tag</a>
-
-    <h1>List tag detail</h1>
+    <h1>Tags List</h1>
 @stop
 
 @section('content')
@@ -38,11 +37,11 @@
 
                 <tbody>
 
-                    @foreach ($tags as $tag)
+                    @foreach ($tags as $index => $tag)
 
                     <tr>
 
-                        <td>{{$tag->id}}</td>
+                        <td>{{$index + 1}}</td>
                         <td>{{$tag->name}}</td>
                         <td width="10px">
                             <a class="btn btn-primary btn-sm " href="{{route('admin.tags.edit', $tag)}}">Edit</a>

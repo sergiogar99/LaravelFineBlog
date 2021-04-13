@@ -3,7 +3,10 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>List</h1>
+
+    <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.categories.create')}}"> Add New Category</a>   
+    <h1>Categories List</h1>
+
 @stop
 
 @section('content')
@@ -16,12 +19,7 @@
 
     <div class="card">
 
-        <div class="card-header">
-            
-            <a class="btn btn-primary btn-sm btn-secondary" href="{{route('admin.categories.create')}}"> Add New Category</a>
-
-        </div>
-
+    
         <div class="card-body">
 
             <table class="table table-striped">
@@ -38,11 +36,11 @@
 
                 <tbody>
                 
-                    @foreach ($categories as $category)
+                    @foreach ($categories as $index=>$category)
 
                         <tr>
                         
-                            <td>{{$category->id}}</td>
+                            <td>{{$index +1}}</td>
                             <td>{{$category->name}}</td>
                             <td width="10px">
                                 <a class="btn btn-primary btn-sm " href="{{route('admin.categories.edit', $category)}}">Edit</a>

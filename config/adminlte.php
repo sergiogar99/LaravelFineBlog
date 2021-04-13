@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Blog</b>Sergio',
+    'logo' => '<b>Blog</b>',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -225,11 +225,6 @@ return [
 
     'menu' => [
         [
-            'text' => 'search',
-            'search' => true,
-            'topnav' => true,
-        ],
-        [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
@@ -240,7 +235,7 @@ return [
             'icon'        => 'fas fa-tachometer-alt fa-fw',
             
         ],
-        ['header' => 'Admin'],
+        ['header' => 'Blog Options'],
         [
             'text' => 'Categories',
             'route'  => 'admin.categories.index',
@@ -253,7 +248,6 @@ return [
             'icon' => 'far fa-fw fa-bookmark',
             'active' => ['admin/tags*'],
         ],
-        ['header' => 'Blog Options'],
         [
             'text'   => 'List Post',
             'route'  => 'admin.posts.index',
